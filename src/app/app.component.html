@@ -3,11 +3,11 @@
 <form [formGroup]="formulario" (ngSubmit)="enviar()">
   <button type="button" (click)="agregarNombre()">➕ Agregar nombre</button>
 
-  <!-- Importante: contenedor con formArrayName -->
+  
   <div formArrayName="nombres">
     <ul>
       <li *ngFor="let _ of nombres.controls; let i = index">
-        <!-- Aquí usamos formControlName con el índice -->
+ 
         <input [formControlName]="i" placeholder="Escribe un nombre" />
         <button type="button" (click)="eliminarNombre(i)">❌ Eliminar</button>
 
